@@ -1,0 +1,11 @@
+- hosts: localhost
+  connection: local
+  tasks:
+    - name: Create a file with content
+      copy:
+        dest: "/tmp/app.conf"
+        content:
+          # Details for image serving bucket
+          IMAGE_BUCKET_NAME = <bucket name>
+          IMAGE_BUCKET_ACCESS_KEY = <access key>
+          IMAGE_BUCKET_SECRET_KEY = <secret key>
